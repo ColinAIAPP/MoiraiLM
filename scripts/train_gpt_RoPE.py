@@ -178,7 +178,7 @@ def main():
     model = GPTLike(sp.get_piece_size(), BLOCK_SIZE).to(DEVICE)
     train(model, dataset)
     torch.save(model.state_dict(), out_path)
-    print(f"✅ 模型已保存: {out_path}")
+    print(f"模型已保存: {out_path}")
 
 if __name__ == "__main__":
     main()
