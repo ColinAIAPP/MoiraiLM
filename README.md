@@ -1,111 +1,179 @@
-# MoiraiLM
+# MoiraiLM 🌟
 
-## English Version
+[![GitHub stars](https://img.shields.io/github/stars/colinwps/MoiraiLM)](https://github.com/colinwps/MoiraiLM/stargazers) [![GitHub license](https://img.shields.io/github/license/colinwps/MoiraiLM)](https://github.com/colinwps/MoiraiLM/blob/main/LICENSE)
 
-### Overview
-MoiraiLM is an open-source large language model (LLM) project developed by ColinAIAPP. Inspired by the Greek Fates (Moirai), this model aims to weave predictive and generative capabilities for advanced natural language processing tasks. It is designed to be efficient, scalable, and adaptable for research and production environments.
+MoiraiLM 是一个开源框架，用于从零构建大型语言模型 (LLM) 🚀。它帮助开发者深入理解和掌握 LLM 的核心组件，包括分词器、Transformer 架构、训练和推理，通过最小化和干净的实现来实现。该名称“Moirai”源自希腊神话中三位命运女神，象征着对语言流动和结果的掌控，类似于 LLM 的生成能力。
 
-Currently, the repository is in its early stages of development. This README will be updated as more features, models, and documentation are added.
+## English Version 🇬🇧
 
-### Features
-- **Modular Architecture**: Built with PyTorch for easy customization and extension.
-- **Pre-trained Models**: Support for base and fine-tuned variants (upcoming).
-- **Efficient Inference**: Optimized for low-latency generation on standard hardware.
-- **Apache 2.0 License**: Freely available for commercial and non-commercial use.
+### Project Overview 📖
+MoiraiLM is an open-source framework for building large language models (LLMs) from scratch. It helps developers understand and master the core components of LLMs, including tokenizer, transformer architecture, training, and inference, through minimal and clean implementations. The name "Moirai" is inspired by the three goddesses of fate in Greek mythology, symbolizing control over the flow and outcome of language, much like LLMs.
 
-### Quick Start
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/ColinAIAPP/MoiraiLM.git
-   cd MoiraiLM
-   ```
-2. Install dependencies (requires Python 3.8+):
-   ```bash
-   pip install -r requirements.txt
-   ```
+### Features ✨
+- ✍️ Handwritten implementation of all LLM components from scratch.
+- 🌐 Custom BPE tokenizer supporting English and Chinese text.
+- 🛠️ Clean transformer code with support for RoPE (Rotary Position Embedding) and RMSNorm.
+- 📚 Minimal training and inference loops designed for educational purposes.
+- 🔗 Full-stack design covering tokenizer, model, training, and inference.
 
-### Installation
-- Ensure you have Python 3.8 or higher.
-- Install via pip (upcoming PyPI release):
-  ```bash
-  pip install moirailm
-  ```
-- For development setup:
-  ```bash
-  pip install -e .
-  ```
+### Project Structure 📂
+The repository is organized as follows:
+```
+MoiraiLM/
+├── tokenizer/         # BPE tokenizer implementation 🗣️
+├── model/             # Transformer architecture 🧠
+├── data/              # Data loading & preprocessing 📊
+├── train/             # Training scripts 🏋️
+├── inference/         # Text generation 📝
+├── utils/             # Helpers and config files 🛠️
+├── examples/          # Usage examples and notebooks 📓
+├── requirements.txt   # Dependencies 📦
+├── configs/           # Configuration files (e.g., train_config.yaml) ⚙️
+└── README.md
+```
 
-### Usage
-Detailed usage guides will be added soon. In the meantime, check the `examples/` directory for sample scripts.
+### Getting Started 🚀
 
-### Contributing
-We welcome contributions! Please follow these steps:
-1. Fork the repository.
-2. Create a feature branch (`git checkout -b feature/amazing-feature`).
-3. Commit your changes (`git commit -m 'Add amazing feature'`).
-4. Push to the branch (`git push origin feature/amazing-feature`).
-5. Open a Pull Request.
+#### 1. Clone the Repository 📥
+```bash
+git clone https://github.com/ColinAIAPP/MoiraiLM.git
+cd MoiraiLM
+```
 
-### License
-This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+#### 2. Install Dependencies 🛠️
+```bash
+pip install -r requirements.txt
+```
+(Note: Dependencies include PyTorch, NumPy, and other standard libraries for ML.)
 
-### Contact
-- Repository: [https://github.com/ColinAIAPP/MoiraiLM](https://github.com/ColinAIAPP/MoiraiLM)
-- Issues: [Report a bug or request a feature](https://github.com/ColinAIAPP/MoiraiLM/issues)
+#### 3. Train BPE Tokenizer 🎓
+Train the tokenizer on your corpus:
+```bash
+python tokenizer/train_bpe.py --input data/corpus.txt --vocab_size 5000
+```
+- `data/corpus.txt`: Your training text corpus (supports mixed English/Chinese).
+- `vocab_size`: Desired vocabulary size (e.g., 5000).
+
+#### 4. Train the Model 🏋️
+```bash
+python train/train_lm.py --config configs/train_config.yaml
+```
+- Customize hyperparameters in `configs/train_config.yaml` (e.g., batch size, learning rate, model dimensions).
+
+#### 5. Run Inference 📝
+Generate text based on a prompt:
+```bash
+python inference/generate.py --prompt "Today is a beautiful day"
+```
+Example outputs:
+- Input: "Today is a beautiful day" → Output: ", perfect for a walk in the park." 🌳
+- Input: "The capital of China is" → Output: "Beijing." 🇨🇳
+
+### Examples 📓
+Check the `examples/` directory for Jupyter notebooks demonstrating:
+- Tokenizer training on custom data 🗣️
+- Fine-tuning the model on specific datasets 🔧
+- Advanced inference techniques like beam search 🔍
+
+### Contributing 🤝
+We welcome contributions! 
+- 🐛 Report bugs or request features via [Issues](https://github.com/colinwps/MoiraiLM/issues).
+- 💡 Submit pull requests for improvements.
+- ⭐ Star the repo to show your support.
+
+### License 📜
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+### Contact 📬
+- GitHub: [@ColinAIAPP](https://github.com/ColinAIAPP)
+- WeChat Official Account: 写代码的中年人 (The Middle-Aged Programmer)
+
+"Destiny is not written — it’s generated, token by token." ✨
 
 ---
 
-# MoiraiLM
+## 中文版 🇨🇳
 
-## 中文版
+### 项目概述 📖
+MoiraiLM 是一个开源框架，用于从零构建大型语言模型 (LLM) 🚀。它帮助开发者深入理解和掌握 LLM 的核心组件，包括分词器、Transformer 架构、训练和推理，通过最小化和干净的实现。该名称“Moirai”源自希腊神话中三位命运女神，象征着对语言流动和结果的掌控，类似于 LLM 的生成能力。
 
-### 概述
-MoiraiLM 是由 ColinAIAPP 开发的一个开源大语言模型 (LLM) 项目。灵感来源于希腊命运三女神 (Moirai)，该模型旨在编织预测和生成能力，用于高级自然语言处理任务。它设计用于高效、可扩展，并适用于研究和生产环境。
+### 特性 ✨
+- ✍️ 从零手写实现所有 LLM 组件。
+- 🌐 自定义 BPE 分词器，支持英文和中文文本。
+- 🛠️ 干净的 Transformer 代码，支持 RoPE (旋转位置嵌入) 和 RMSNorm。
+- 📚 最小化的训练和推理循环，专为教育目的设计。
+- 🔗 全栈设计，涵盖分词器、模型、训练和推理。
 
-目前，该仓库处于早期开发阶段。本 README 将随着更多功能、模型和文档的添加而更新。
+### 项目结构 📂
+仓库结构如下：
+```
+MoiraiLM/
+├── tokenizer/         # BPE 分词器实现 🗣️
+├── model/             # Transformer 架构 🧠
+├── data/              # 数据加载与预处理 📊
+├── train/             # 训练脚本 🏋️
+├── inference/         # 文本生成 📝
+├── utils/             # 辅助工具和配置文件 🛠️
+├── examples/          # 使用示例和笔记本 📓
+├── requirements.txt   # 依赖项 📦
+├── configs/           # 配置文件 (例如 train_config.yaml) ⚙️
+└── README.md
+```
 
-### 特性
-- **模块化架构**：使用 PyTorch 构建，便于自定义和扩展。
-- **预训练模型**：支持基础和微调变体（即将推出）。
-- **高效推理**：针对标准硬件优化低延迟生成。
-- **Apache 2.0 许可**：可免费用于商业和非商业用途。
+### 快速开始 🚀
 
-### 快速开始
-1. 克隆仓库：
-   ```bash
-   git clone https://github.com/ColinAIAPP/MoiraiLM.git
-   cd MoiraiLM
-   ```
-2. 安装依赖项（需要 Python 3.8+）：
-   ```bash
-   pip install -r requirements.txt
-   ```
+#### 1. 克隆仓库 📥
+```bash
+git clone https://github.com/ColinAIAPP/MoiraiLM.git
+cd MoiraiLM
+```
 
-### 安装
-- 确保安装 Python 3.8 或更高版本。
-- 通过 pip 安装（即将发布 PyPI 版本）：
-  ```bash
-  pip install moirailm
-  ```
-- 开发环境设置：
-  ```bash
-  pip install -e .
-  ```
+#### 2. 安装依赖 🛠️
+```bash
+pip install -r requirements.txt
+```
+(注意：依赖包括 PyTorch、NumPy 等机器学习标准库。)
 
-### 使用方法
-详细使用指南即将添加。同时，请查看 `examples/` 目录中的示例脚本。
+#### 3. 训练 BPE 分词器 🎓
+在语料库上训练分词器：
+```bash
+python tokenizer/train_bpe.py --input data/corpus.txt --vocab_size 5000
+```
+- `data/corpus.txt`：您的训练文本语料库（支持中英文混合）。
+- `vocab_size`：期望的词汇表大小（例如 5000）。
 
-### 贡献
-我们欢迎贡献！请遵循以下步骤：
-1. 分叉仓库。
-2. 创建功能分支（`git checkout -b feature/amazing-feature`）。
-3. 提交更改（`git commit -m 'Add amazing feature'`）。
-4. 推送到分支（`git push origin feature/amazing-feature`）。
-5. 打开 Pull Request。
+#### 4. 训练模型 🏋️
+```bash
+python train/train_lm.py --config configs/train_config.yaml
+```
+- 在 `configs/train_config.yaml` 中自定义超参数（例如批次大小、学习率、模型维度）。
 
-### 许可
-本项目采用 Apache 许可 2.0 - 请参阅 [LICENSE](LICENSE) 文件以获取详细信息。
+#### 5. 运行推理 📝
+基于提示生成文本：
+```bash
+python inference/generate.py --prompt "今天天气真好"
+```
+示例输出：
+- 输入："今天天气真好" → 输出："，适合出去散步。" 🌳
+- 输入："中国的首都是" → 输出："北京。" 🇨🇳
 
-### 联系方式
-- 仓库：[https://github.com/ColinAIAPP/MoiraiLM](https://github.com/ColinAIAPP/MoiraiLM)
-- 问题：[报告 bug 或请求功能](https://github.com/ColinAIAPP/MoiraiLM/issues)
+### 示例 📓
+查看 `examples/` 目录中的 Jupyter 笔记本，演示：
+- 在自定义数据上训练分词器 🗣️
+- 在特定数据集上微调模型 🔧
+- 高级推理技术，如束搜索 🔍
+
+### 贡献 🤝
+欢迎贡献！
+- 🐛 通过 [Issues](https://github.com/ColinAIAPP/MoiraiLM/issues) 报告 bug 或请求功能。
+- 💡 提交拉取请求以改进代码。
+- ⭐ 给仓库加星以支持开发。
+
+### 许可 📜
+本项目采用 MIT 许可 - 详见 [LICENSE](LICENSE) 文件。
+
+### 联系方式 📬
+- GitHub: [@ColinAIAPP](https://github.com/ColinAIAPP)
+- 微信公众号：写代码的中年人
+
+“命运并非书写而成——它是由一个一个 token 生成的。” ✨
